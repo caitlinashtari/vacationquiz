@@ -12,3 +12,8 @@
 h2 {
   padding-top: 70px;
 }
+
+/* Result -----------------------*/
+#result {
+  display: none;
+}
