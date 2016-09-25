@@ -1,0 +1,14 @@
+/* Heading and background ------------------- */
+
+.jumbotron {
+  text-align: center;
+  color: #FFF;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-style: italic;
+  background-image: url("../img/beachjumbo.jpg");
+  background-size: auto 100%;
+}
+
+h2 {
+  padding-top: 70px;
+}
