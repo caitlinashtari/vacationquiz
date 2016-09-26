@@ -1,7 +1,6 @@
 /* Back End */
 var result;
 var vacation = function (name, bear){
-
   if (name) {
     if (name ==="Tara Dactyl"){
       if (bear === "bedtime"){
@@ -52,9 +51,6 @@ var vacation = function (name, bear){
     }
 }
 
-
-
-
 /* Front End */
 $(document).ready(function(){
 
@@ -69,18 +65,18 @@ $("form").submit(function(event){
   if (result === "New Zealand"){
     $("span#nameOutput1").text(name);
     $("#vacationType").text("New Zealand!")
-    $("#result, #newZealandP").show();
-    $("#blank, .toHide").hide();
+    $("#result, #newZealandP").fadeIn(1000);
+    $("#blank, .toHide").fadeOut();
   } else if (result === "Hawaii") {
       $("span#nameOutput2").text(name);
       $("#vacationType").text("Hawaii!")
-      $("#result, #hawaiiP").show();
-      $("#blank, .toHide").hide();
+      $("#result, #hawaiiP").fadeIn(1000);
+      $("#blank, .toHide").fadeOut();
   } else if (result === "Thailand"){
       $("span#nameOutput3").text(name);
       $("#vacationType").text("Thailand!")
-      $("#result, #thailandP").show();
-      $("#blank, .toHide").hide();
+      $("#result, #thailandP").fadeIn(1000);
+      $("#blank, .toHide").fadeOut();
   } else if (result === "Work") {
       $("span#nameOutput4").text(name);
       $("#vacationType").text("No vacation for you!")
