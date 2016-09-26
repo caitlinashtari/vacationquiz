@@ -1,45 +1,90 @@
 /* Back End */
-var name;
-var bear;
+var result;
+var vacation = function (name, bear, music, kryptonite, friday){
+
+  if (name) {
+    if (name ==="Tara Dactyl"){
+      if (bear === "bedtime"){
+        return "New Zealand";
+      } else if (bear === "funshine"){
+        return "Hawaii";
+      } else if (bear === "loud"){
+        return "Thailand";
+      } else if (bear === "amigo"){
+        return "Work"
+      }
+
+  } else if (name ==="Rainbow Dash") {
+      if (bear === "bedtime"){
+        return "New Zealand";
+      } else if (bear === "funshine"){
+        return "Hawaii";
+      } else if (bear === "loud"){
+        return "Thailand";
+      } else if (bear === "amigo"){
+        return "Work"
+      }
+
+  } else if (name === "Michaelangelo") {
+      if (bear === "bedtime"){
+        return "New Zealand";
+      } else if (bear === "funshine"){
+        return "Hawaii";
+      } else if (bear === "loud"){
+        return "Thailand";
+      } else if (bear === "amigo"){
+        return "Work"
+      }
+
+  } else if (name === "Steve") {
+      if (bear === "bedtime"){
+        return "New Zealand";
+      } else if (bear === "funshine"){
+        return "Hawaii";
+      } else if (bear === "loud"){
+        return "Thailand";
+      } else if (bear === "amigo"){
+        return "Work"
+      }
+    }
+  } else {
+    alert("Ahem. A name. Please.")
+    }
+}
+
+
+
 
 /* Front End */
 $(document).ready(function(){
 
 $("form").submit(function(event){
-  name = $("input:radio[name=name]:checked").val();
-  bear = $("input:radio[name=bear]:checked").val();
-  music = $("input:radio[name=music]:checked").val();
-  kryptonite = $("input:radio[name=kryptonite]:checked").val();
-  friday = $("input:radio[name=friday]:checked").val();
+  var name = $("input:radio[name=name]:checked").val();
+  var bear = $("input:radio[name=bear]:checked").val();
+  var music = $("input:radio[name=music]:checked").val();
+  var kryptonite = $("input:radio[name=kryptonite]:checked").val();
+  var friday = $("input:radio[name=friday]:checked").val();
+  var result = vacation(name, bear, music, kryptonite, friday);
 
-if (name){
-  if (name === "Tara Dactyl" || bear === "funshine") {
-      $("span#nameOutput1").append(name);
-      $("#vacationType").append("New Zealand!")
-      $("#result, #newZealandP").show();
-    } else if (name === "Rainbow Dash") {
-        if(bear === "loud"){
-          $("span#nameOutput2").append(name);
-          $("#vacationType").append("Hawaii!")
-          $("#result, #hawaiiP").show();
-    } else {
+
+  if (result === "New Zealand"){
+    $("span#nameOutput1").append(name);
+    $("#vacationType").append("New Zealand!")
+    $("#result, #newZealandP").show();
+  } else if (result === "Hawaii") {
       $("span#nameOutput2").append(name);
       $("#vacationType").append("Hawaii!")
       $("#result, #hawaiiP").show();
-    }
-  } else if (name === "Michaelangelo") {
+  } else if (result === "Thailand"){
       $("span#nameOutput3").append(name);
       $("#vacationType").append("Thailand!")
       $("#result, #thailandP").show();
-  } else if (name === "Steve") {
+  } else if (result === "Work") {
       $("span#nameOutput4").append(name);
       $("#vacationType").append("No vacation for you!")
       $("#result, #workP").show();
   }
-  else {
-    alert("Ahem. A name. Please.")
-  }
-}
-event.preventDefault();
+
+    event.preventDefault();
   });
 });
