@@ -1,6 +1,6 @@
 /* Back End */
 var result;
-var vacation = function (name, bear, music, kryptonite, friday){
+var vacation = function (name, bear){
 
   if (name) {
     if (name ==="Tara Dactyl"){
@@ -64,27 +64,29 @@ $("form").submit(function(event){
   var music = $("input:radio[name=music]:checked").val();
   var kryptonite = $("input:radio[name=kryptonite]:checked").val();
   var friday = $("input:radio[name=friday]:checked").val();
-  var result = vacation(name, bear, music, kryptonite, friday);
-
+  var result = vacation(name, bear);
 
   if (result === "New Zealand"){
-    $("span#nameOutput1").append(name);
-    $("#vacationType").append("New Zealand!")
+    $("span#nameOutput1").text(name);
+    $("#vacationType").text("New Zealand!")
     $("#result, #newZealandP").show();
+    $("#blank, .toHide").hide();
   } else if (result === "Hawaii") {
-      $("span#nameOutput2").append(name);
-      $("#vacationType").append("Hawaii!")
+      $("span#nameOutput2").text(name);
+      $("#vacationType").text("Hawaii!")
       $("#result, #hawaiiP").show();
+      $("#blank, .toHide").hide();
   } else if (result === "Thailand"){
-      $("span#nameOutput3").append(name);
-      $("#vacationType").append("Thailand!")
+      $("span#nameOutput3").text(name);
+      $("#vacationType").text("Thailand!")
       $("#result, #thailandP").show();
+      $("#blank, .toHide").hide();
   } else if (result === "Work") {
-      $("span#nameOutput4").append(name);
-      $("#vacationType").append("No vacation for you!")
+      $("span#nameOutput4").text(name);
+      $("#vacationType").text("No vacation for you!")
       $("#result, #workP").show();
+      $("#blank, .toHide").hide();
   }
-
     event.preventDefault();
   });
 });

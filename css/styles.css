@@ -1,5 +1,4 @@
 /* Heading and background ------------------- */
-
 .jumbotron {
   text-align: center;
   color: #FFF;
@@ -13,14 +12,52 @@ h2 {
   padding-top: 70px;
 }
 
-/* Radio buttons ---------------*/
+/* Buttons ---------------*/
+form  p,
+.radio > label {
+  color: #27A0A3;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+.radio > label {
+  font-style: italic;
+}
 
+.btn,
+.btn:hover{
+  color: #fff;
+  background-color: #27A0A3;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 30px 10px;
+  border-style: double;
+  border-color: #F8D66D;
+  box-shadow: 5px 5px 5px #F8D66D;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
 
-/* Result -----------------------*/
+/* Results -----------------------*/
 #result,
 #hawaiiP,
 #newZealandP,
 #thailandP,
 #workP {
   display: none;
+  padding-top: 20px;
+}
+
+#result {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 50px;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+img {
+  float:left;
+  padding-right: 10px;
+  width: 50%;
+}
+
+#blank {
+  padding: 100px;
 }
